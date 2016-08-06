@@ -15,10 +15,12 @@ xkb_symbols "winkeys" {
     key <AE05> { [           5,     percent  ] };
     key <AE06> { [           6,       colon  ] };
     key <AE07> { [           7,    question  ] };
-    key <AE08> { [           8,    asterisk  ] };
+    key <AE08> { [           8,    asterisk, U20BD  ] };
 
     key <AB10> { [      period,       comma  ] };
     key <BKSL> { [   backslash,       slash  ] };
+
+    include "level3(ralt_switch)"
 };
 
 hidden partial alphanumeric_keys
@@ -478,11 +480,12 @@ xkb_symbols "srp" {
 };
 
 // Mari language layout
-// http://www.marlamuter.ru/
+// http://www.marlamuter.com/
+// Last edit by Viatcheslav Kileev (slavakileev@yandex.ru)
 partial alphanumeric_keys
 xkb_symbols "chm" {
 
-    include "ru(common)"
+    include "ru(winkeys)"
     name[Group1]= "Mari";
 
     key.type[group1]="FOUR_LEVEL_ALPHABETIC";
@@ -491,11 +494,80 @@ xkb_symbols "chm" {
     key <AD03> { [   Cyrillic_u,   Cyrillic_U,   U04F1,   U04F0  ] };
     key <AC02> { [ Cyrillic_yeru, Cyrillic_YERU, U04F9,   U04F8  ] };
     key <AD06> { [   Cyrillic_en,  Cyrillic_EN,  U04A5,   U04A4  ] };
-    key <AC11> { [   Cyrillic_e,   Cyrillic_E,   U04E9,   U04E8  ] };
-    key <AC10> { [  Cyrillic_zhe,  Cyrillic_ZHE, U04EB,   U04EA  ] };
-    key <AC01> { [   Cyrillic_ef,  Cyrillic_EF,  UF537,   UF536  ] };
+    key <AC07> { [   Cyrillic_o,   Cyrillic_O,   U04E7,   U04E6  ] };
 
     include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "phonetic_azerty" {
+
+    include "level3(ralt_switch)"
+
+    name[Group1]= "Russian (phonetic azerty)";
+
+     key <AE01>	{ [ ampersand,          1,  onesuperior,   exclamdown ]	};
+     key <AE02>	{ [    eacute,          2,   asciitilde,    oneeighth ]	};
+     key <AE03>	{ [  quotedbl,          3,   numbersign,     sterling ]	};
+     key <AE04>	{ [apostrophe,          4,    braceleft,       dollar ]	};
+     key <AE05>	{ [ parenleft,          5,  bracketleft, threeeighths ]	};
+     key <AE06>	{ [     minus,          6,          bar,  fiveeighths ]	};
+     key <AE07>	{ [    egrave,          7,        grave, seveneighths ]	};
+     key <AE08>	{ [underscore,          8,    backslash,    trademark ]	};
+     key <AE09>	{ [  ccedilla,          9,  asciicircum,    plusminus ]	};
+     key <AE10>	{ [    agrave,          0,           at,       degree ]	};
+     key <AE11>	{ [parenright,     degree, bracketright, questiondown ]	};
+     key <AE12>	{ [     equal,       plus,   braceright,  dead_ogonek ]	};
+
+     key <AB07>  { [     comma,   question,        acute,  doubleacute ] };
+     key <AB08>	{ [ semicolon,     period, horizconnector,   multiply ]	};
+     key <AB09>	{ [     colon,      slash, periodcentered,   division ]	};
+     key <AB10>	{ [    exclam,    section, dead_belowdot, dead_abovedot ] };
+
+     key <AC11>  { [    ugrave,    percent,  asciicircum,        caron ] };
+     key	<LSGT> {	[	      bar,	 brokenbar	]	};
+
+     key	<TLDE> {	[     Cyrillic_yu,     Cyrillic_YU	]	};
+     key	<AC01> {	[     Cyrillic_ya,     Cyrillic_YA	]	}; // Q
+     key	<AD02> {	[     Cyrillic_ze,     Cyrillic_ZE	]	}; // Z
+     key	<LatS> {	[     Cyrillic_es,     Cyrillic_ES	]	};
+     key	<AD01> {	[      Cyrillic_a,	Cyrillic_A	]	};
+     key	<AB01> {	[     Cyrillic_ve,     Cyrillic_VE	]	}; // W
+     key	<LatC> {	[    Cyrillic_tse,    Cyrillic_TSE	]	};
+     key	<LatX> {	[Cyrillic_softsign,Cyrillic_SOFTSIGN	]	};
+     key	<LatD> {	[     Cyrillic_de,     Cyrillic_DE	]	};
+     key	<LatE> {	[     Cyrillic_ie,     Cyrillic_IE	]	};
+     key	<LatV> {	[    Cyrillic_zhe,    Cyrillic_ZHE	]	};
+     key	<LatF> {	[     Cyrillic_ef,     Cyrillic_EF	]	};
+     key	<LatT> {	[     Cyrillic_te,     Cyrillic_TE	]	};
+     key	<LatR> {	[     Cyrillic_er,     Cyrillic_ER	]	};
+     key	<LatN> {	[     Cyrillic_en,     Cyrillic_EN	]	};
+     key	<LatB> {	[     Cyrillic_be,     Cyrillic_BE	]	};
+     key	<LatH> {	[     Cyrillic_ha,     Cyrillic_HA	]	};
+     key	<LatG> {	[    Cyrillic_ghe,    Cyrillic_GHE	]	};
+     key	<LatY> {	[   Cyrillic_yeru,   Cyrillic_YERU	]	};
+     key	<AC10> {	[     Cyrillic_em,     Cyrillic_EM	]	}; // M
+     key	<LatJ> {	[ Cyrillic_shorti, Cyrillic_SHORTI	]	};
+     key	<LatU> {	[      Cyrillic_u,	Cyrillic_U	]	};
+     key	<LatK> {	[     Cyrillic_ka,     Cyrillic_KA	]	};
+     key	<LatI> {	[      Cyrillic_i,	Cyrillic_I	]	};
+     key	<LatO> {	[      Cyrillic_o,	Cyrillic_O	]	};
+     key	<LatL> {	[     Cyrillic_el,     Cyrillic_EL	]	};
+     key	<LatP> {	[     Cyrillic_pe,     Cyrillic_PE	]	};
+
+    key	<AD11> {	[    Cyrillic_sha,    Cyrillic_SHA	]	};
+    key	<AE12> {	[    Cyrillic_che,    Cyrillic_CHE	]	};
+    key	<AD12> {	[  Cyrillic_shcha,  Cyrillic_SHCHA	]	};
+    key	<BKSL> {	[      Cyrillic_e,	Cyrillic_E	]	};
+};
+
+partial alphanumeric_keys
+xkb_symbols "phonetic_fr" {
+
+    include "fr"
+    include "ru(phonetic_azerty)"
+
+    name[Group1]= "Russian (phonetic French)";
 };
 
 // EXTRAS:
@@ -648,11 +720,75 @@ xkb_symbols "mac" {
     key <AE08> { [             8,    semicolon  ] };
     key <TLDE> { [  bracketright,  bracketleft  ] };
     key <BKSL> { [   Cyrillic_io,  Cyrillic_IO  ] };
-};
 
+    key <AC06> { [   Cyrillic_er,  Cyrillic_ER, U20BD ] };
+
+    include "level3(ralt_switch)"
+};
 
 // Dvorak Russian layout
 // by RainBraun 01/01/2015
+partial alphanumeric_keys
+xkb_symbols "rud" {
+
+    name[Group1]= "Russian (Dvorak)";
+
+    key <TLDE> { [  grave, asciitilde, dead_grave, dead_tilde  ] };
+
+    key <AE01> { [  1,  exclam      ]   };
+    key <AE02> { [  2,  at      ]   };
+    key <AE03> { [  3,  numbersign  ]   };
+    key <AE04> { [  4,  dollar      ]   };
+    key <AE05> { [  5,  percent     ]   };
+    key <AE06> { [  6,  asciicircum, dead_circumflex, dead_circumflex ] };
+    key <AE07> { [  7,  ampersand   ]   };
+    key <AE08> { [  8,  asterisk    ]   };
+    key <AE09> { [  9,  parenleft,  dead_grave] };
+    key <AE10> { [  0,  parenright  ]   };
+    key <AE11> { [  bracketleft, braceleft   ]   };
+    key <AE12> { [  bracketright, braceright,  dead_tilde] };
+
+    key <AD01> { [  apostrophe, quotedbl, dead_acute, dead_diaeresis    ] };
+    key <AD02> { [  comma,  less,   dead_cedilla, dead_caron    ] };
+    key <AD03> { [  period, greater, dead_abovedot, periodcentered  ] };
+    key <AD04> { [  Cyrillic_pe,       Cyrillic_PE  ] };
+    key <AD05> { [  Cyrillic_yeru,     Cyrillic_YERU  ] };
+    key <AD06> { [  Cyrillic_ef,       Cyrillic_EF  ] };
+    key <AD07> { [  Cyrillic_ghe,      Cyrillic_GHE  ] };
+    key <AD08> { [  Cyrillic_tse,      Cyrillic_TSE,      Cyrillic_che,      Cyrillic_CHE ] }; // Р§
+    key <AD09> { [  Cyrillic_er,       Cyrillic_ER  ] };
+    key <AD10> { [  Cyrillic_el,       Cyrillic_EL  ] };
+    key <AD11> { [  slash,  question    ]   };
+    key <AD12> { [  equal,  plus        ]   };
+
+    key <AC01> { [  Cyrillic_a,        Cyrillic_A  ] };
+    key <AC02> { [  Cyrillic_o,        Cyrillic_O,        Cyrillic_io,       Cyrillic_IO  ] }; // РЃ
+    key <AC03> { [  Cyrillic_ie,       Cyrillic_IE,       Cyrillic_e,        Cyrillic_E   ] }; // Р­
+    key <AC04> { [  Cyrillic_u,        Cyrillic_U,        Cyrillic_yu,       Cyrillic_YU  ] }; // Р®
+    key <AC05> { [  Cyrillic_i,        Cyrillic_I  ] };
+    key <AC06> { [  Cyrillic_de,       Cyrillic_DE  ] };
+    key <AC07> { [  Cyrillic_ha,       Cyrillic_HA  ] };
+    key <AC08> { [  Cyrillic_te,       Cyrillic_TE  ] };
+    key <AC09> { [  Cyrillic_en,       Cyrillic_EN  ] };
+    key <AC10> { [  Cyrillic_es,       Cyrillic_ES,       Cyrillic_sha,      Cyrillic_SHA ] }; // РЁ
+    key <AC11> { [  minus,  underscore  ]   };
+
+    key <AB01> { [  semicolon, colon, dead_ogonek, dead_doubleacute ] };
+    key <AB02> { [  Cyrillic_ya,       Cyrillic_YA  ] };
+    key <AB03> { [  Cyrillic_shorti,   Cyrillic_SHORTI  ] };
+    key <AB04> { [  Cyrillic_ka,       Cyrillic_KA  ] };
+    key <AB05> { [  Cyrillic_shcha,    Cyrillic_SHCHA  ] };
+    key <AB06> { [  Cyrillic_be,       Cyrillic_BE,       Cyrillic_hardsign, Cyrillic_HARDSIGN  ] }; // РќР° AltGr - РЄ
+    key <AB07> { [  Cyrillic_em,       Cyrillic_EM  ] };
+    key <AB08> { [  Cyrillic_ve,       Cyrillic_VE  ] };
+    key <AB09> { [  Cyrillic_softsign, Cyrillic_SOFTSIGN  ] };
+    key <AB10> { [  Cyrillic_ze,       Cyrillic_ZE,       Cyrillic_zhe,      Cyrillic_ZHE  ] };
+
+    key <BKSL> { [  backslash,  bar ]       };
+    key <BKSP> { [ BackSpace,       BackSpace ] };
+};
+
+// Dvorak Russian layout
 partial alphanumeric_keys
 xkb_symbols "rud" {
 
