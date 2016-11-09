@@ -1,9 +1,22 @@
+[![warning](https://img.shields.io/badge/warning-Make%20a%20backup%20before-yellow.svg)]() 
+
 # DvorakRus
-Dvorak. Russian layout.
 
 Русская, фонетическая раскладка Дворак.
 
 ![dvorak layout](https://github.com/LightAir/DvorakRus/blob/master/img/dvorak_layout_ru.png)
+
+## Установка
+archlinux & ubuntu. На других не проверялось.
+
+**Перед установкой настоятельно рекомендую выполнить бекап заменяемых файлов!**
+
+Установка производится путём подмены некоторых системных файлов. Что и куда копируется можно посмотреть в replace.sh
+
+```
+cd ~/ && git clone https://github.com/LightAir/DvorakRus.git && cd DvorakRus/ && chmod +x replace.sh
+sudo ./replace.sh
+```
 
 Если вы используете малопопулярную wm, то можете установить раскладку путём добавления
 в файл автозагрузки строки:
