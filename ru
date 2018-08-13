@@ -727,68 +727,6 @@ xkb_symbols "mac" {
 };
 
 // Dvorak Russian layout
-// by RainBraun 01/01/2015
-partial alphanumeric_keys
-xkb_symbols "rud" {
-
-    name[Group1]= "Russian (Dvorak)";
-
-    key <TLDE> { [  grave, asciitilde, dead_grave, dead_tilde  ] };
-
-    key <AE01> { [  1,  exclam      ]   };
-    key <AE02> { [  2,  at      ]   };
-    key <AE03> { [  3,  numbersign  ]   };
-    key <AE04> { [  4,  dollar      ]   };
-    key <AE05> { [  5,  percent     ]   };
-    key <AE06> { [  6,  asciicircum, dead_circumflex, dead_circumflex ] };
-    key <AE07> { [  7,  ampersand   ]   };
-    key <AE08> { [  8,  asterisk    ]   };
-    key <AE09> { [  9,  parenleft,  dead_grave] };
-    key <AE10> { [  0,  parenright  ]   };
-    key <AE11> { [  bracketleft, braceleft   ]   };
-    key <AE12> { [  bracketright, braceright,  dead_tilde] };
-
-    key <AD01> { [  apostrophe, quotedbl, dead_acute, dead_diaeresis    ] };
-    key <AD02> { [  comma,  less,   dead_cedilla, dead_caron    ] };
-    key <AD03> { [  period, greater, dead_abovedot, periodcentered  ] };
-    key <AD04> { [  Cyrillic_pe,       Cyrillic_PE  ] };
-    key <AD05> { [  Cyrillic_yeru,     Cyrillic_YERU  ] };
-    key <AD06> { [  Cyrillic_ef,       Cyrillic_EF  ] };
-    key <AD07> { [  Cyrillic_ghe,      Cyrillic_GHE  ] };
-    key <AD08> { [  Cyrillic_tse,      Cyrillic_TSE,      Cyrillic_che,      Cyrillic_CHE ] }; // Р§
-    key <AD09> { [  Cyrillic_er,       Cyrillic_ER  ] };
-    key <AD10> { [  Cyrillic_el,       Cyrillic_EL  ] };
-    key <AD11> { [  slash,  question    ]   };
-    key <AD12> { [  equal,  plus        ]   };
-
-    key <AC01> { [  Cyrillic_a,        Cyrillic_A  ] };
-    key <AC02> { [  Cyrillic_o,        Cyrillic_O,        Cyrillic_io,       Cyrillic_IO  ] }; // РЃ
-    key <AC03> { [  Cyrillic_ie,       Cyrillic_IE,       Cyrillic_e,        Cyrillic_E   ] }; // Р­
-    key <AC04> { [  Cyrillic_u,        Cyrillic_U,        Cyrillic_yu,       Cyrillic_YU  ] }; // Р®
-    key <AC05> { [  Cyrillic_i,        Cyrillic_I  ] };
-    key <AC06> { [  Cyrillic_de,       Cyrillic_DE  ] };
-    key <AC07> { [  Cyrillic_ha,       Cyrillic_HA  ] };
-    key <AC08> { [  Cyrillic_te,       Cyrillic_TE  ] };
-    key <AC09> { [  Cyrillic_en,       Cyrillic_EN  ] };
-    key <AC10> { [  Cyrillic_es,       Cyrillic_ES,       Cyrillic_sha,      Cyrillic_SHA ] }; // РЁ
-    key <AC11> { [  minus,  underscore  ]   };
-
-    key <AB01> { [  semicolon, colon, dead_ogonek, dead_doubleacute ] };
-    key <AB02> { [  Cyrillic_ya,       Cyrillic_YA  ] };
-    key <AB03> { [  Cyrillic_shorti,   Cyrillic_SHORTI  ] };
-    key <AB04> { [  Cyrillic_ka,       Cyrillic_KA  ] };
-    key <AB05> { [  Cyrillic_shcha,    Cyrillic_SHCHA  ] };
-    key <AB06> { [  Cyrillic_be,       Cyrillic_BE,       Cyrillic_hardsign, Cyrillic_HARDSIGN  ] }; // РќР° AltGr - РЄ
-    key <AB07> { [  Cyrillic_em,       Cyrillic_EM  ] };
-    key <AB08> { [  Cyrillic_ve,       Cyrillic_VE  ] };
-    key <AB09> { [  Cyrillic_softsign, Cyrillic_SOFTSIGN  ] };
-    key <AB10> { [  Cyrillic_ze,       Cyrillic_ZE,       Cyrillic_zhe,      Cyrillic_ZHE  ] };
-
-    key <BKSL> { [  backslash,  bar ]       };
-    key <BKSP> { [ BackSpace,       BackSpace ] };
-};
-
-// Dvorak Russian layout
 partial alphanumeric_keys
 xkb_symbols "rud" {
 
