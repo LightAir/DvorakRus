@@ -21,7 +21,27 @@ sudo ./replace.sh
 Если вы используете малопопулярную wm, то можете установить раскладку путём добавления
 в файл автозагрузки строки:
 
-```setxkbmap "us,ru,dvorak,ru" -variant ",,,rud" -option "grp:alt_shift_toggle"```
+```setxkbmap "us,ru,dvorak,ru" -variant ",,,rud" -option "lv3:rwin_switch,grp:alt_shift_toggle"```
+
+в options: Правый альт включение lv3 уровня (для ё,э,ж и т.д.), Alt + Shift переключение раскладки
+
+В i3 я на нужные мне кнопки добавил 2 скрипта, первый (set-default.sh) переключает на стандартную клаву
+```
+#!/bin/bash
+setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle"
+
+# Это для нотификации о переключении
+notify-send --expire-time=50 "Standart keyboard"
+```
+
+Второй (set-dvorak.sh) на фонетический дворак
+```
+#!/bin/bash
+setxkbmap "dvorak,ru" ",rud" "lv3:ralt_switch,grp:alt_shift_toggle"
+
+# Это для нотификации о переключении
+notify-send --expire-time=50 "Dvorak keyboard"
+```
 
 В данном примере на **alt+shift** назначено переключение по 4 раскладкам:
 ```us, ru, dvorak, dvorak ru phonetic```
