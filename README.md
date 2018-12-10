@@ -46,4 +46,4 @@ notify-send --expire-time=50 "Dvorak keyboard"
 В данном примере на **alt+shift** назначено переключение по 4 раскладкам:
 ```us, ru, dvorak, dvorak ru phonetic```
 
-Настройка раскладки в KDE показана тут http://softroot.ru/all/archlinux-dvorak-i-klaviatura-dns/
+Настройка раскладки в KDE показана тут http://old.softroot.ru/all/archlinux-dvorak-i-klaviatura-dns/
